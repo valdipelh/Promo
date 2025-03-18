@@ -1,0 +1,42 @@
+{
+  "name": "More.TV",
+  "slug": "more-tv",
+  "rating": 4.0,
+  "order": 8,
+  "url": "https://more.tv",
+  "logo": "/More.jpg",
+  "pricing": {
+    "free_trial": "14 days",
+    "basic_plan": 299,
+    "premium_plan": 549,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "25,000+",
+    "exclusive_shows": ["Трудные подростки", "257 причин, чтобы жить"],
+    "genres": ["Movies", "Series", "Reality Shows"]
+  },
+  "quality": {
+    "max_resolution": "1080p",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "MORE299",
+      "discount": "2 months for 299₽",
+      "valid_until": "2024-11-30",
+      "terms": "New subscribers only"
+    }
+  ]
+}

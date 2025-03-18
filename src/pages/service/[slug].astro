@@ -1,0 +1,167 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Monitor, Smartphone, Tv, Gamepad2, Star, Download, Users } from 'lucide-react';
+import { streamingServices } from '../../data/services';
+import type { StreamingService } from '../../types';
+
+export function getStaticPaths() {
+  return streamingServices.map(service => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+interface Props {
+  service: StreamingService;
+}
+
+const { service } = Astro.props;
+
+const description = `Актуальные промо коды ${service.name} на ${new Date().getFullYear()} год. Скидки до ${service.promo_codes[0]?.discount || '50%'}. Бесплатный пробный период ${service.pricing.free_trial}.`;
+---
+
+<Layout 
+  title={`Промо коды ${service.name} ${new Date().getFullYear()}`}
+  description={description}
+>
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-[#1e1e1e] rounded-lg overflow-hidden shadow-xl">
+      {/* Header Section */}
+      <div class="p-8 border-b border-gray-700">
+        <div class="flex items-center justify-between mb-6">
+          <img src={service.logo} alt={`${service.name} логотип`} class="h-16 object-contain" />
+          <div class="flex items-center">
+            <Star className="w-6 h-6 text-yellow-400 fill-current" />
+            <span class="ml-2 text-2xl font-bold">{service.rating}</span>
+          </div>
+        </div>
+        <h1 class="text-4xl font-bold mb-4">Промо коды {service.name}</h1>
+        <div class="flex flex-wrap gap-4">
+          {service.platform_support.web_browser && (
+            <div class="flex items-center text-blue-400">
+              <Monitor className="w-5 h-5 mr-2" />
+              <span>Браузер</span>
+            </div>
+          )}
+          {service.platform_support.mobile_app && (
+            <div class="flex items-center text-blue-400">
+              <Smartphone className="w-5 h-5 mr-2" />
+              <span>Мобильные</span>
+            </div>
+          )}
+          {service.platform_support.smart_tv && (
+            <div class="flex items-center text-blue-400">
+              <Tv className="w-5 h-5 mr-2" />
+              <span>Smart TV</span>
+            </div>
+          )}
+          {service.platform_support.game_consoles && (
+            <div class="flex items-center text-blue-400">
+              <Gamepad2 className="w-5 h-5 mr-2" />
+              <span>Консоли</span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Promo Codes Section - Moved to top for better visibility */}
+      {service.promo_codes.length > 0 && (
+        <div class="p-8 border-b border-gray-700">
+          <h2 class="text-2xl font-bold mb-6">Активные промо коды {service.name}</h2>
+          {service.promo_codes.map(promo => (
+            <div class="bg-[#ff6600] bg-opacity-20 rounded-lg p-6 mb-4">
+              <div class="flex justify-between items-center mb-4">
+                <code class="font-mono text-[#ff6600] text-2xl">
+                  {promo.code}
+                </code>
+                <button
+                  class="bg-[#ff6600] text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                  onclick={`navigator.clipboard.writeText('${promo.code}')`}
+                >
+                  Скопировать промо код
+                </button>
+              </div>
+              <p class="text-[#ff6600] font-semibold mb-2">{promo.discount}</p>
+              <p class="text-sm text-gray-400">Действует до: {promo.valid_until}</p>
+              <p class="text-sm text-gray-400">{promo.terms}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Pricing Section */}
+      <div class="p-8 border-b border-gray-700">
+        <h2 class="text-2xl font-bold mb-6">Тарифы {service.name}</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-[#2a2a2a] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Базовый тариф</h3>
+            <p class="text-3xl font-bold text-blue-400 mb-4">{service.pricing.basic_plan}₽<span class="text-sm text-gray-400">/мес</span></p>
+            <p class="text-gray-400">Пробный период: {service.pricing.free_trial}</p>
+          </div>
+          <div class="bg-[#2a2a2a] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold mb-2">Премиум тариф</h3>
+            <p class="text-3xl font-bold text-blue-400 mb-4">{service.pricing.premium_plan}₽<span class="text-sm text-gray-400">/мес</span></p>
+            <p class="text-gray-400">{service.pricing.ads_supported ? 'С рекламой' : 'Без рекламы'}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div class="p-8 border-b border-gray-700">
+        <h2 class="text-2xl font-bold mb-6">Возможности</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-center">
+            <Download className="w-6 h-6 text-blue-400 mr-3" />
+            <div>
+              <h3 class="font-semibold">Офлайн-просмотр</h3>
+              <p class="text-gray-400">{service.availability.offline_download ? 'Доступно' : 'Недоступно'}</p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <Users className="w-6 h-6 text-blue-400 mr-3" />
+            <div>
+              <h3 class="font-semibold">Несколько профилей</h3>
+              <p class="text-gray-400">{service.availability.multiple_profiles ? 'Поддерживается' : 'Не поддерживается'}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div class="p-8 border-b border-gray-700">
+        <h2 class="text-2xl font-bold mb-6">Контент</h2>
+        <p class="text-lg mb-4">Общая библиотека: <span class="font-semibold">{service.content.total_movies_series}</span></p>
+        <div class="mb-6">
+          <h3 class="font-semibold mb-2">Доступные жанры</h3>
+          <div class="flex flex-wrap gap-2">
+            {service.content.genres.map(genre => (
+              <span class="bg-blue-500 bg-opacity-20 text-blue-400 px-3 py-1 rounded-full">
+                {genre}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2">Эксклюзивные шоу</h3>
+          <ul class="list-disc list-inside text-gray-400">
+            {service.content.exclusive_shows.map(show => (
+              <li>{show}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div class="p-8 bg-[#2a2a2a]">
+        <a
+          href={service.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Активировать промо код на {service.name}
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,42 @@
+{
+  "name": "IVI",
+  "slug": "ivi",
+  "rating": 4.6,
+  "order": 2,
+  "url": "https://www.ivi.ru",
+  "logo": "/IVI.jpg",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 299,
+    "premium_plan": 499,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "80,000+",
+    "exclusive_shows": ["Художник", "Территория"],
+    "genres": ["Movies", "Series", "Animation", "Shows"]
+  },
+  "quality": {
+    "max_resolution": "4K",
+    "dolby_atmos": true,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "IVI500",
+      "discount": "500₽ off subscription",
+      "valid_until": "2024-06-30",
+      "terms": "Valid for all users"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { streamingServices } from '../data/services';
+import ServiceCard from '../components/ServiceCard.astro';
+
+const description = "Актуальные промо коды для российских стриминговых сервисов 2024 года. Найдите выгодные предложения и сэкономьте на подписке. Ежедневное обновление базы промокодов.";
+---
+
+<Layout 
+  title="Промо коды для стриминговых сервисов России 2024"
+  description={description}
+>
+  <div class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">Актуальные промо коды</h2>
+    <p class="text-gray-400 mb-6">
+      Выберите сервис для просмотра действующих промо кодов и специальных предложений. 
+      Все промо коды проверены и регулярно обновляются.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {streamingServices.map(service => (
+      <ServiceCard service={service} />
+    ))}
+  </div>
+</Layout>

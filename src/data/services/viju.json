@@ -1,0 +1,42 @@
+{
+  "name": "Viju",
+  "slug": "viju",
+  "rating": 4.0,
+  "order": 10,
+  "url": "https://viju.ru",
+  "logo": "/Viju.webp",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 399,
+    "premium_plan": 699,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "35,000+",
+    "exclusive_shows": ["Paramount+ Originals", "Showtime Series"],
+    "genres": ["Movies", "Series", "Paramount Content"]
+  },
+  "quality": {
+    "max_resolution": "4K",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "VIJU399",
+      "discount": "3 months for price of 2",
+      "valid_until": "2024-08-31",
+      "terms": "All users"
+    }
+  ]
+}

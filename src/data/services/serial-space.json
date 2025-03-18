@@ -1,0 +1,42 @@
+{
+  "name": "Serial Space",
+  "slug": "serial-space",
+  "rating": 4.9,
+  "order": 0,
+  "url": "https://serialspace.ru",
+  "logo": "/Serial.webp",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 299,
+    "premium_plan": 499,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "15,000+",
+    "exclusive_shows": ["Корпорация", "Тайный город"],
+    "genres": ["Series", "TV Shows", "Anime"]
+  },
+  "quality": {
+    "max_resolution": "1080p",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": false
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": false,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "SPACE299",
+      "discount": "First month for 299₽",
+      "valid_until": "2024-07-31",
+      "terms": "New users only"
+    }
+  ]
+}

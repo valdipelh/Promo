@@ -1,0 +1,42 @@
+{
+  "name": "Wink",
+  "slug": "wink",
+  "rating": 4.3,
+  "order": 3,
+  "url": "https://wink.rt.ru",
+  "logo": "/Wink.png",
+  "pricing": {
+    "free_trial": "14 days",
+    "basic_plan": 249,
+    "premium_plan": 599,
+    "ads_supported": false
+  },
+  "content": {
+    "total_movies_series": "50,000+",
+    "exclusive_shows": ["Вампиры средней полосы", "Чики"],
+    "genres": ["Movies", "Series", "Sports", "TV Channels"]
+  },
+  "quality": {
+    "max_resolution": "4K",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "WINK300",
+      "discount": "300₽ off first month",
+      "valid_until": "2024-09-30",
+      "terms": "New subscribers only"
+    }
+  ]
+}

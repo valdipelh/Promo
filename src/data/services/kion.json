@@ -1,0 +1,42 @@
+{
+  "name": "KION",
+  "slug": "kion",
+  "rating": 4.2,
+  "order": 5,
+  "url": "https://kion.ru",
+  "logo": "/KION.jpg",
+  "pricing": {
+    "free_trial": "14 days",
+    "basic_plan": 199,
+    "premium_plan": 599,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "40,000+",
+    "exclusive_shows": ["Почка", "Честный развод"],
+    "genres": ["Movies", "Series", "TV Shows", "Sports"]
+  },
+  "quality": {
+    "max_resolution": "4K",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "KION2024",
+      "discount": "3 months for price of 1",
+      "valid_until": "2024-07-31",
+      "terms": "New subscribers only"
+    }
+  ]
+}

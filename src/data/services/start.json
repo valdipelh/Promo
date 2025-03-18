@@ -1,0 +1,42 @@
+{
+  "name": "START",
+  "slug": "start",
+  "rating": 4.4,
+  "order": 6,
+  "url": "https://start.ru",
+  "logo": "/START.png",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 299,
+    "premium_plan": 499,
+    "ads_supported": false
+  },
+  "content": {
+    "total_movies_series": "30,000+",
+    "exclusive_shows": ["Содержанки", "Шторм"],
+    "genres": ["Movies", "Series", "Shows"]
+  },
+  "quality": {
+    "max_resolution": "4K",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "START399",
+      "discount": "399₽ for 2 months",
+      "valid_until": "2024-10-31",
+      "terms": "First-time subscribers"
+    }
+  ]
+}

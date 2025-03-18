@@ -1,0 +1,42 @@
+{
+  "name": "Okko",
+  "slug": "okko",
+  "rating": 4.5,
+  "order": 4,
+  "url": "https://okko.tv",
+  "logo": "/Okko.png",
+  "pricing": {
+    "free_trial": "14 days",
+    "basic_plan": 399,
+    "premium_plan": 799,
+    "ads_supported": false
+  },
+  "content": {
+    "total_movies_series": "60,000+",
+    "exclusive_shows": ["Псих", "Преступление"],
+    "genres": ["Movies", "Series", "Animation", "Concerts"]
+  },
+  "quality": {
+    "max_resolution": "4K HDR",
+    "dolby_atmos": true,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": true
+  },
+  "promo_codes": [
+    {
+      "code": "OKKO50",
+      "discount": "50% off for 3 months",
+      "valid_until": "2024-08-31",
+      "terms": "Available for all users"
+    }
+  ]
+}

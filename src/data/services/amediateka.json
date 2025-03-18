@@ -1,0 +1,42 @@
+{
+  "name": "Amediateka",
+  "slug": "amediateka",
+  "rating": 4.3,
+  "order": 9,
+  "url": "https://amediateka.ru",
+  "logo": "/Amediateka.png",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 599,
+    "premium_plan": 799,
+    "ads_supported": false
+  },
+  "content": {
+    "total_movies_series": "30,000+",
+    "exclusive_shows": ["Игра престолов", "Дом дракона"],
+    "genres": ["Movies", "Series", "HBO Content"]
+  },
+  "quality": {
+    "max_resolution": "4K HDR",
+    "dolby_atmos": true,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": true
+  },
+  "promo_codes": [
+    {
+      "code": "AMEDIA599",
+      "discount": "First 2 months for 599₽",
+      "valid_until": "2024-12-31",
+      "terms": "New subscribers only"
+    }
+  ]
+}

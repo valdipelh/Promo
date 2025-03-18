@@ -1,0 +1,42 @@
+{
+  "name": "Premier",
+  "slug": "premier",
+  "rating": 4.1,
+  "order": 7,
+  "url": "https://premier.one",
+  "logo": "/Premier.webp",
+  "pricing": {
+    "free_trial": "7 days",
+    "basic_plan": 199,
+    "premium_plan": 399,
+    "ads_supported": true
+  },
+  "content": {
+    "total_movies_series": "20,000+",
+    "exclusive_shows": ["Жена олигарха", "Толя-робот"],
+    "genres": ["Movies", "Series", "TV Shows"]
+  },
+  "quality": {
+    "max_resolution": "1080p",
+    "dolby_atmos": false,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": false
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": false
+  },
+  "promo_codes": [
+    {
+      "code": "PREMIER199",
+      "discount": "First month for 199₽",
+      "valid_until": "2024-12-31",
+      "terms": "New users only"
+    }
+  ]
+}

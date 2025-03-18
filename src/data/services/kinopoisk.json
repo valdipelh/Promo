@@ -1,0 +1,42 @@
+{
+  "name": "Кинопоиск",
+  "slug": "kinopoisk",
+  "rating": 4.2,
+  "order": 2,
+  "url": "https://kinopoisk.ru",
+  "logo": "/Кинопоиск.jpg",
+  "pricing": {
+    "free_trial": "30 days",
+    "basic_plan": 199,
+    "premium_plan": 399,
+    "ads_supported": false
+  },
+  "content": {
+    "total_movies_series": "100,000+",
+    "exclusive_shows": ["Нулевой пациент", "Слово пацана", "Король и Шут"],
+    "genres": ["Movies", "Series", "Animation", "Documentaries"]
+  },
+  "quality": {
+    "max_resolution": "4K HDR",
+    "dolby_atmos": true,
+    "surround_sound": true
+  },
+  "availability": {
+    "offline_download": true,
+    "multiple_profiles": true
+  },
+  "platform_support": {
+    "web_browser": true,
+    "mobile_app": true,
+    "smart_tv": true,
+    "game_consoles": true
+  },
+  "promo_codes": [
+    {
+      "code": "KINO2024",
+      "discount": "30% off first 3 months",
+      "valid_until": "2024-12-31",
+      "terms": "New users only"
+    }
+  ]
+}
